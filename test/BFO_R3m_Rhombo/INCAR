@@ -1,0 +1,46 @@
+$system   =  BiFeO3 cubic
+
+#cutoff (eV):
+ENCUT     =  500
+
+#Max number of SCF steps
+NELM      =  100
+EDIFF     =  1E-09
+IBRION    =  8
+ISIF      =  3
+LEPSILON  = .TRUE.
+LRAP      = .FALSE.
+#NSW       =  60
+#EDIFFG    = -5.0E-4
+
+# Spin stuff
+# spin polarized? 2=yes
+ISPIN     =  2
+# collinear:
+MAGMOM = 2*0 5 -5 6*0
+
+ISMEAR    = 1
+SIGMA     = 0.01
+NBANDS    = 120
+
+# Technical parameters
+PREC      =  Accurate
+LREAL     = .FALSE.
+ADDGRID   = .TRUE.
+LMAXMIX   =  4
+LORBIT    =  11
+
+LPLANE = .TRUE.
+#NPAR   = 2
+LSCALU = .FALSE.
+NSIM   = 4
+
+# LDA+U for LaFeAlO3
+LDAU      =  .TRUE.
+LDAUTYPE  =  1
+LDAUL     =  -1  2 -1
+LDAUU     =  0.0 5.0 0.0
+LDAUJ     =  0.0 0.0 0.0
+LDAUPRINT =  2
+
+GGA = PS

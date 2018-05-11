@@ -1,0 +1,53 @@
+#prtsrlr  1
+
+# General informations
+#**********************
+   rfmeth  1
+   enunit  0   # unite:0=>Ha-cm-1; 1=>meV-THz; 2=>Ha-cm et meV-THz
+   eivec   1  # 0=>not write; 1=>write eingenve
+   asr     0   # 0=>no ASR; 1=>ASR symmetric; 2=>ASR unconstrained
+   chneut  0   # 0=>no; 1=>ASR for Z*(equal portion); 2=>ASR for Z* +screening charge
+   selectz  0  # 0=>no change; 1=>isotropic Z*tensor; 2=>symmetricZ*tensor (averaging)
+
+
+# Flags
+#*******
+   dieflag  1  # 0=>not; 1=>freq-depdt epsilon tensor; 2=>epsilo infty; 3=>relaxed-ion epsilon tensor
+   ifcflag  1  # 0=> dictly with DDB, without ifc; 1=>ifc are computed and used for phon spec and dyn-matrices
+   thmflag  0  # thermal flag
+    nlflag  0  # non linear flag
+
+# Interatomic force constant information
+#****************************************
+   dipdip  1   # 0=>not; 1=>dipole-dipole interaction is subtracted from the dynamical matrices before Fourier transform
+   nsphere  0   # Number of atoms included in the cut-off sphere for ifc: 0=>max extent allowed by the grid
+   ifcout  80  # give the number of neighbouring atoms for which the ifc's will be output
+   ifcana  1   # 0=> no analysis of ifc; 1=> analysis of ifc
+   natifc  0  # Give the number of atoms for which ifc's are written
+   atifc   1 2 3 4 #10 # Atoms for IFC analysis
+
+# Wavevector grid number 1
+#**************************
+   brav  1      # 1=> all; 2=>FCC; 3=>BCC; 4=>Hexagonal
+   ngqpt 1 1 1  # Number of Grids points for Q Points
+   nqshft 1     # Number of vector shifts of the simple Monkhorst and Pack grid: 2=>BCCsampling; 4=>FCCsampling
+   q1shft 0.0 0.0 0.0
+
+# Wavevector list number 1
+#**************************
+   nph1l 1      # Number of PHonons in List 1
+   qph1l 0.00  0.0  0.0  1 # Q for PHonon List 1
+
+!Wavevector list number 2 (Cartesian directions for non-analytic gamma phonons)
+
+!The output for this calculation must be cut-and-pasted into the
+! out.freq file to be used as band2eps input to get proper LO-TO
+! splitting at gamma.  Note that gamma occurrs twice.
+
+  nph2l    3       ! number of directions in list 2
+
+
+  qph2l   1.0  0.0  0.0    0.0
+          0.0  1.0  0.0    0.0
+          0.0  0.0  1.0    0.0
+
