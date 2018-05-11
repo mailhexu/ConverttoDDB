@@ -1,0 +1,36 @@
+$system   =  WO3 
+
+#Precision flags:
+PREC      =  Accurate
+LREAL     = .FALSE.
+ADDGRID   = .TRUE.
+
+# Relaxaton flags:
+NELMIN    =  6
+NELM      =  80
+#NSW       =  200
+EDIFF     =  1E-09
+#EDIFFG    = -5.0E-5
+IBRION    =  8
+ISIF      =  3
+LEPSILON  = .TRUE.
+LRPA      = .FALSE.
+
+ISMEAR    = -5
+
+ENCUT     =  550   
+
+LMAXMIX   =  4
+
+
+# parallelism flags:
+LPLANE = .TRUE.
+#NPAR   = 2
+LSCALU = .FALSE.
+NSIM   = 4
+
+LWAVE  = .FALSE.
+
+# PBEsol flag:
+GGA    = PS
+

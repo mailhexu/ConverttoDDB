@@ -1,0 +1,12 @@
+
+
+ecut   5
+kptopt 1
+ngkpt  1 1 1
+ixc    1
+nstep  1
+toldfe 1.0E+05
+iscf   5
+prtden 0
+prtwf  0
+prteig 0
